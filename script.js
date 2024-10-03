@@ -62,6 +62,32 @@ class CarManager
   }
 }
 
+// Validation
+function validateInputs(name, model, year, price) 
+{
+  const currentYear = new Date().getFullYear();
+  
+  if (!name || !model) 
+  {
+    alert("Name and model cannot be empty.");
+    return false;
+  }
+
+  if (!Number.isInteger(year) || year < 1886 || year > currentYear) 
+  {
+    alert("Please enter a valid manufacture year (between 1886 and the current year).");
+    return false;
+  }
+
+  if (isNaN(price) || price <= 0) 
+  {
+    alert("Please enter a valid price greater than 0.");
+    return false;
+  }
+
+  return true;
+}
+
 // Event listener setup
 document.addEventListener('DOMContentLoaded', () => 
   {
