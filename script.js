@@ -85,7 +85,8 @@ document.addEventListener('DOMContentLoaded', () =>
 
       // Form fields cleared after adding a car
       document.getElementById('car-form').reset();
-    } else 
+    } 
+    else 
     {
       alert('Please fill out all fields correctly!');
     }
