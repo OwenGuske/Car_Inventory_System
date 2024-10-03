@@ -40,7 +40,7 @@ class CarManager
     carList.innerHTML = '';
 
     this.cars.forEach((car, index) => 
-      {
+    {
       const currentYear = new Date().getFullYear();
       const depreciatedPrice = car.calculatePrice(currentYear);
       carList.innerHTML += `
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () =>
 
   // Event listener for 'Add Car' 
   document.getElementById('add-car').addEventListener('click', () => 
-    {
+  {
     // Get input values from the form
     const name = document.getElementById('name').value;
     const model = document.getElementById('model').value;
